@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BITS</title>
+		<link rel="stylesheet" type="text/css" href="test.css">
+	</head>
+	<body>
+		<header>
+            <nav>
+                <ul>
+                    <a href="home.html"><li>Home</li></a>
+                    <a href="#"><li>Check In</li></a>
+                    <a href="booking.html"><li>Booking</li></a>
+					<a href="#"><li>Current Reservations</li></a>
+                </ul>
+            </nav>
+        </header>
+		<form name="bookForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+			<fieldset>
+			<legend>Booking Information</legend>
+			<br>
+			<div>
+			Group Title:<br>
+			<input type="text" name="group">
+			<br><br>
+			Number of Players:<br>
+			<input type="text" name="playersnum"><br><br>
+			Reservation for:<br>
+			<select name="reservation">
+				<option value="def">Select Option</option>
+				<option value="tourn">Tournament</option>
+				<option value="equip">Equipment</option>
+			</select><br><br>
+			Time In:<br>
+			<select name="timein">
+				<option value="def">Select Time</option>
+				<option value="1">8:00</option>
+				<option value="2">8:15</option>
+				<option value="3">8:30</option>
+				<option value="4">8:45</option>
+				<option value="5">9:00</option>
+				<option value="6">9:15</option>
+				<option value="7">9:30</option>
+				<option value="8">9:45</option>
+				<option value="9">10:00</option>
+				<option value="10">10:15</option>
+				<option value="11">10:30</option>
+				<option value="12">10:45</option>
+				<option value="13">11:00</option>
+				<option value="14">11:15</option>
+				<option value="15">11:30</option>
+				<option value="16">11:45</option>
+				<option value="17">12:00</option>
+				<option value="18">12:15</option>
+				<option value="19">12:30</option>
+				<option value="20">12:45</option>
+				<option value="21">1:00</option>
+				<option value="22">1:15</option>
+				<option value="23">1:30</option>
+				<option value="24">1:45</option>
+			</select><br><br>
+			Time Out:<br>
+			<select name="timeout">
+				<option value="def">Select Time</option>
+				<option value="2">8:15</option>
+				<option value="3">8:30</option>
+				<option value="4">8:45</option>
+				<option value="5">9:00</option>
+				<option value="6">9:15</option>
+				<option value="7">9:30</option>
+				<option value="8">9:45</option>
+				<option value="9">10:00</option>
+				<option value="10">10:15</option>
+				<option value="11">10:30</option>
+				<option value="12">10:45</option>
+				<option value="13">11:00</option>
+				<option value="14">11:15</option>
+				<option value="15">11:30</option>
+				<option value="16">11:45</option>
+				<option value="17">12:00</option>
+				<option value="18">12:15</option>
+				<option value="19">12:30</option>
+				<option value="20">12:45</option>
+				<option value="21">1:00</option>
+				<option value="22">1:15</option>
+				<option value="23">1:30</option>
+				<option value="24">1:45</option>
+			</select><br><br>
+			<input type="submit" value="Submit">
+			</div>
+			</fieldset>
+		</form>
+
+		<script>
+			function validateForm() {
+				var x = document.forms["bookForm"]["group"].value;
+				var a = "";
+				if (x == "") {
+					a += "Group Title must be filled out";
+				}
+
+				var x = document.forms["bookForm"]["playersnum"].value;
+				if (x == "") {
+					a += "\nNumber of Players must be filled out";
+				}
+
+				var x = document.forms["bookForm"]["reservation"].value;
+				if (x == "def") {
+					a += "\nReservation for must be chosen";
+				}
+
+				var x = document.forms["bookForm"]["timein"].value;
+				if (x == "def") {
+					a += "\nTime In must have a time";
+				}
+
+				var y = document.forms["bookForm"]["timeout"].value;
+				if (y == "def") {
+					a += "\nTime Out must have a time";
+				}
+				else if(y <= x){
+					a += "Time Out must be later than Time In";
+				}
+
+				if(a != ""){
+					alert(a);
+					return false;
+				}
+
+			}
+		</script>
+	</body>
+	
+<html>
