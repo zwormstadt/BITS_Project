@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+		<title>BITS</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="test.css">
+	</head>
+	<body>
+		<header>
+            <nav>
+                <ul>
+                    <a href="home.html" style="text-decoration: none;"><li>Home</li></a>
+                    <a href="#" style="text-decoration: none;"><li>Check In</li></a>
+                    <a href="booking.html" style="text-decoration: none;"><li>Booking</li></a>
+					<a href="reservations.html" style="text-decoration: none; background-color: #ddd;
+					color: black;"><li>Current Reservations</li></a>
+                </ul>
+            </nav>
+        </header>
+		<div class="title">
+			<h2 style="font-weight: bold;">Tournament Reservations</h2>
+		</div>
+		<div class="my_table">
+		<div class="table-responsive col-md-10">
+		<table class="table table-bordered table-striped table-hover table-condensed  text-center" id="DyanmicTable">
+			<thead>
+			  <tr>
+				<th class="text-center">
+					Group Title
+				</th>
+				<th class="text-center">
+					Number of Players
+				</th>
+				<th class="text-center">
+					Type
+				</th>
+				<th class="text-center">
+					Date
+				</th>
+				<th class="text-center">
+					Time In
+				</th>
+				<th class="text-center">
+					Time Out
+				</th>
+				<th class="text-center">
+				  <button id="addNewRow" class="btn btn-primary btn-sm">Add New Row</button>
+				</th>
+			  </tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>12U Brookings</td>
+					<td>45</td>
+					<td>Round Robin</td>
+					<td>06/13/2021</td>
+					<td>8:30 a.m.</td>
+					<td>10:30 a.m.</td>
+				</tr>
+				<tr>
+					<td>Rec League</td>
+					<td>20</td>
+					<td>Single Elimination</td>
+					<td>06/18/2021</td>
+					<td>10:30 a.m.</td>
+					<td>12:30 p.m.</td>
+				</tr>
+				<tr>
+					<td>College Night</td>
+					<td>30</td>
+					<td>Double Elimination</td>
+					<td>06/28/2021</td>
+					<td>1:30 p.m.</td>
+					<td>3:45 p.m.</td>
+				</tr>
+				<tr>
+					<td>Junior High</td>
+					<td>65</td>
+					<td>Single Elimination</td>
+					<td>06/20/2021</td>
+					<td>5:00 p.m.</td>
+					<td>7:00 p.m.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+    <!--JS Files-->
+<script  src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+<script src="bootstable.min.js"></script>
+<script>
+ $('#DyanmicTable').SetEditable({ $addButton: $('#addNewRow')});
+</script>
+  </body>
+</html>

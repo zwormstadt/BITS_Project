@@ -61,9 +61,14 @@ body {
   padding: 8px;
 }
 
+.title {
+	text-align:center;	
+}
+
 * {
   box-sizing: border-box;
 }
+/*
 
 .alert {
   padding: 10px;
@@ -74,9 +79,6 @@ body {
   text-align:center;
 }
 
-.title {
-	text-align:center;	
-}
 
 table {
   border-collapse: collapse;
@@ -120,4 +122,4 @@ caption {
   cursor: pointer;
   font-size: 15px;
   margin-left: 48%;
-}
+} */

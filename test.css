@@ -72,7 +72,7 @@ body {
 }
 
 .title {
-	text-align:center;	
+	text-align:center;
 }
 
 .main-nav{
@@ -104,4 +104,10 @@ body {
 .main-nav a:hover {
 	background-color: #ddd;
 	color: black;
+}
+
+.my_table {
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    padding-left: 20%;
 }
